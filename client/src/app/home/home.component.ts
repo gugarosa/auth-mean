@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { User } from '../models/User';
 import { UserService } from '../services/user.service';
@@ -9,16 +9,12 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   currentUser: User;
   users: User[] = [];
 
   constructor(private userService: UserService) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  }
-
-  ngOnInit() {
-    this.loadAllUsers();
   }
 
   deleteUser(_id: string) {
