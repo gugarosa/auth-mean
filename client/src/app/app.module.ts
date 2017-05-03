@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppConfig } from './app.config';
 
 import { AlertComponent } from './alert/alert.component';
+import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
@@ -21,6 +22,7 @@ import { UserService } from './services/user.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'edit', component: EditComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 
@@ -31,6 +33,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AlertComponent,
+    EditComponent,
     HomeComponent,
     LoginComponent,
     RegisterComponent
