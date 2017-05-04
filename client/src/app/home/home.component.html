@@ -1,5 +1,24 @@
-<div class="col-md-6 col-md-offset-3">
-  <h1>Hi {{currentUser.firstName}}!</h1>
-  <p>You're logged in with the MEAN Stack & Angular 2!!</p>
-  <p><a [routerLink]="['/edit']" class="btn btn-primary"><span class="fa fa-pencil"></span> Edit Profile</a> <a [routerLink]="['/login']" class="btn btn-danger"><span class="fa fa-sign-out"></span> Logout</a></p>
+<div class="well well-sm" align="center">
+  <b>Welcome to AuthMean, {{currentUser.firstName}}!</b>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="list-group">
+      <div class="list-group-item active">
+        Dashboard
+      </div>
+      <a [routerLink]="['/edit']" class="list-group-item"><span class="fa fa-pencil"></span> Edit Profile</a>
+      <a [routerLink]="['/login']" class="list-group-item"><span class="fa fa-sign-out"></span> Logout</a>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Overview
+      </div>
+      <div class="panel-body">
+        <p>You're logged in with the MEAN Stack & Angular 2!!</p>
+      </div>
+    </div>
+  </div>
 </div>
