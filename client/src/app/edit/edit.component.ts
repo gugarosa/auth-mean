@@ -8,7 +8,7 @@ import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.css']
+  styleUrls: ['./edit.component.scss']
 })
 export class EditComponent {
   currentUser: User;
